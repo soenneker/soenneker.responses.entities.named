@@ -11,5 +11,5 @@ namespace Soenneker.Responses.Entities.Named;
 public record NamedEntityResponse : EntityResponse
 {
     [JsonPropertyName("name")]
-    public string Name { get; set; } = null!;
+    public virtual string Name { get; set; } = null!;
 }
