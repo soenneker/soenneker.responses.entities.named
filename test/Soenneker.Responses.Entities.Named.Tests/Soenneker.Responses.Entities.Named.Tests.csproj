@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Responses.Entities.Named.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Responses.Entities.Named\Soenneker.Responses.Entities.Named.csproj" />
     </ItemGroup>
 
     <ItemGroup>
