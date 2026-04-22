@@ -56,7 +56,7 @@ jobs:
         run: dotnet build test/Soenneker.Responses.Entities.Named.Tests/Soenneker.Responses.Entities.Named.Tests.csproj --configuration Release --no-restore --verbosity minimal
 
       - name: Test
-        run: dotnet test test/Soenneker.Responses.Entities.Named.Tests/Soenneker.Responses.Entities.Named.Tests.csproj --configuration Release --no-build --no-restore --verbosity normal
+        run: dotnet test --project test/Soenneker.Responses.Entities.Named.Tests/Soenneker.Responses.Entities.Named.Tests.csproj --configuration Release --no-build --no-restore --verbosity normal
 
 
       - name: Restore library
