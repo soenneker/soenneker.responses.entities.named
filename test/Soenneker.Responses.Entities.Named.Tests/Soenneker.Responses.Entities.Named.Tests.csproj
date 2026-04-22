@@ -14,10 +14,5 @@
     <ItemGroup>
         <ProjectReference Include="..\..\src\Soenneker.Responses.Entities.Named\Soenneker.Responses.Entities.Named.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-        <Content Include="testconfig.json">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
 </Project>
+
