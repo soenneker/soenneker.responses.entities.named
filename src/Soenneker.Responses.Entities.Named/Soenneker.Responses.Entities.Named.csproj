@@ -44,6 +44,10 @@
     </ItemGroup>
 
     <ItemGroup>
+<<<<<<< HEAD
         <PackageReference Include="Soenneker.Responses.Entity" Version="4.0.61" />
+=======
+      <PackageReference Include="Soenneker.Responses.Entity" Version="4.0.62" />
+>>>>>>> 0bcd6536a09af5c0d233b2d72f8f8c4275f5cdfd
     </ItemGroup>
 </Project>
