@@ -10,6 +10,9 @@ namespace Soenneker.Responses.Entities.Named;
 [PublicOpenApiObject]
 public record NamedEntityResponse : EntityResponse
 {
+    /// <summary>
+    /// The display name for the entity.
+    /// </summary>
     [JsonPropertyName("name")]
     public virtual string Name { get; set; } = null!;
 }
