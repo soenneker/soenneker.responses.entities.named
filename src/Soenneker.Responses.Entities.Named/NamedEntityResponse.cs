@@ -5,13 +5,13 @@ using Soenneker.Responses.Entity;
 namespace Soenneker.Responses.Entities.Named;
 
 /// <summary>
-/// A derived EntityResponse model with a Name property, serialized using System.Text.Json property names.
+/// Provides the stable identifier, timestamps, and human-readable display name shared by named API resource responses.
 /// </summary>
 [PublicOpenApiObject]
 public record NamedEntityResponse : EntityResponse
 {
     /// <summary>
-    /// The display name for the entity.
+    /// Human-readable display name of the resource.
     /// </summary>
     [JsonPropertyName("name")]
     public virtual string Name { get; set; } = null!;
