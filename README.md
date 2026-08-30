@@ -5,20 +5,38 @@
 
 # Soenneker.Responses.Entities.Named
 
-Provides the stable identifier, timestamps, and human-readable display name shared by named API resource responses.
+A reusable API response record for named resources, with an identifier and audit timestamps.
 
-## Install
+## Installation
 
 ```bash
 dotnet add package Soenneker.Responses.Entities.Named
 ```
 
-## What you get
+## Usage
 
-- `NamedEntityResponse` — Provides the stable identifier, timestamps, and human-readable display name shared by named API resource responses.
+Use `NamedEntityResponse` directly for a simple resource contract:
 
-## API at a glance
+```csharp
+using Soenneker.Responses.Entities.Named;
 
-| API | What it does | Result / important behavior |
-| --- | --- | --- |
-| `NamedEntityResponse.Name` | Human-readable display name of the resource. | Human-readable display name of the resource. |
+var response = new NamedEntityResponse
+{
+    Id = environment.Id,
+    Name = environment.Name,
+    CreatedAt = environment.CreatedAt,
+    ModifiedAt = environment.ModifiedAt
+};
+```
+
+Or derive a more specific response without repeating the common fields:
+
+```csharp
+public record EnvironmentResponse : NamedEntityResponse
+{
+    public required string Region { get; init; }
+}
+```
+
+The JSON properties inherited from `EntityResponse` are `id`, `createdAt`, and `modifiedAt`; this package adds `name`. `ModifiedAt` is nullable for resources that have not been updated since creation.
+
