@@ -45,6 +45,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Soenneker.Responses.Entity" Version="4.0.87" />
+      <PackageReference Include="Soenneker.Responses.Entity" Version="4.0.90" />
     </ItemGroup>
 </Project>
